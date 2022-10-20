@@ -1,0 +1,50 @@
+:root {
+  --dark-color: #1E1B0B;
+  --beige-color: beige;
+  --gray-color: gray;
+  --orange-color: rgb(237, 104, 37);
+  --light-color: #C0CAAD;
+  --white-color: white;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+/* containers */
+.media-section {
+  display: flex;
+  justify-content: center;
+}
+
+.products-section {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.navbar {
+  background-color: var(--beige-color);
+  overflow: hidden;
+  margin-top: 4.5%;
+}
+
+@media (max-width: 700px) {
+  .navbar {
+    margin-top: 0%;
+  }
+}
+
+.banner {
+  background-color: var(--dark-color);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 0.5%;
+  z-index: 1;
+}
+
+@media (max-width: 700px) {
+  .banner {
+    position: sticky;
+  }
+}
