@@ -1,0 +1,45 @@
+/* card object */
+.card {
+    width: 10%;
+  
+    border-style: dashed;
+    border-radius: 2%;
+    border-width: 2px;
+    border-color: var(--gray-color);
+  
+    flex: 1 16%;
+    margin: 1%;
+  }
+  
+  .card .card-image {
+    width: 80%;
+    margin: 9%;
+  }
+  
+  .card .card-text {
+    text-align: center;
+  }
+
+  .card .card-text-small {
+    text-align: center;
+    color: var(--gray-color);
+    font-size: medium;
+  }
+  
+  @media (max-width: 1000px) {
+    .card {
+      flex: 1 21%;
+    }
+  }
+  
+  @media (max-width: 700px) {
+    .card {
+      flex: 1 26%;
+    }
+  }
+  
+  @media (max-width: 400px) {
+    .card .card-text {
+      font-size: small;
+    }
+  }

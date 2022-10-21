@@ -1,0 +1,23 @@
+/* banner */
+.banner .header {
+    font-size: large;
+    color: var(--white-color);
+    display: flex;
+  }
+  
+  .banner .content {
+    display: flex;
+  }
+  
+  .banner .header-section {
+    color: var(--light-color);
+  }
+  
+  .badge {
+    background-color: var(--orange-color);
+    color: var(--white-color);
+    text-align: center;
+    padding-left: 0.5%;
+    padding-right: 0.5%;
+    border-radius: 5px;
+  }
