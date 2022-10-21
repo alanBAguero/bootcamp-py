@@ -1,3 +1,8 @@
+@import 'banner.css';
+@import 'card.css';
+@import 'media.css';
+@import 'navbar.css';
+
 :root {
   --dark-color: #1E1B0B;
   --beige-color: beige;
@@ -28,7 +33,7 @@ body {
   margin-top: 4.5%;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 1000px) {
   .navbar {
     margin-top: 0%;
   }
@@ -43,7 +48,7 @@ body {
   z-index: 1;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 1000px) {
   .banner {
     position: sticky;
   }
