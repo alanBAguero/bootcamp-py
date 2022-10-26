@@ -8,23 +8,18 @@
       <div class="header-section">
         <strong>Código abierto para la participación</strong>
       </div>
-      &nbsp;
+      &nbsp
       <div class="badge">ciudadana</div>
     </div>
   </div>
 </header>
 <nav>
-  <div class="navbar">
-    <a>Home</a>
-    <a>Features</a>
-    <a>Pricing</a>
-    <div class="search-container">
-      <input type="text" placeholder="Search..." />
-    </div>
-  </div>
+  <%= render 'navbars/index', navbars: @navbars %>
 </nav>
 <article>
-  <section></section>
-  <section></section>
-  <section></section>
+  <% @posts.each do |post| %>
+    <%= render 'posts/index', post: post %>
+  <% end %>
+
+  <%= render 'products/index', products: @products %>
 </article>

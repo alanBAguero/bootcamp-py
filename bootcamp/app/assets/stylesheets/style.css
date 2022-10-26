@@ -20,6 +20,7 @@ body {
 .media-section {
     display: flex;
     justify-content: center;
+    padding: 1%;
 }
 
 .products-section {
