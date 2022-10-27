@@ -1,0 +1,23 @@
+<%= form_with(model: navbar) do |form| %>
+  <% if navbar.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(navbar.errors.count, "error") %> prohibited this navbar from being saved:</h2>
+
+      <ul>
+        <% navbar.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= form.label 'Título' %>
+    <%= form.text_field :label %>
+
+    <%= form.label 'URL' %>
+    <%= form.text_field :url %>
+
+    <%= form.submit %>
+  </div>
+<% end %>

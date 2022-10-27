@@ -17,9 +17,12 @@
   <%= render 'navbars/index', navbars: @navbars %>
 </nav>
 <article>
+  <%= link_to 'Administrar Posts', posts_url %>
   <% @posts.each do |post| %>
     <%= render 'posts/index', post: post %>
   <% end %>
 
+  </hr>
+  <%= link_to 'Administrar Productos',  products_path %>
   <%= render 'products/index', products: @products %>
 </article>
