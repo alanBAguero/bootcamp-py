@@ -6,10 +6,6 @@ class NavbarsController < ApplicationController
     @navbars = Navbar.all
   end
 
-  # GET /navbars/1 or /navbars/1.json
-  def show
-  end
-
   # GET /navbars/new
   def new
     @navbar = Navbar.new
