@@ -1,32 +1,26 @@
 <%= form_with(model: product) do |form| %>
   <% if product.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(product.errors.count, "error") %> prohibited this product from being saved:</h2>
-
-      <ul>
-        <% product.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
+      <h2>Error al crear producto, intente de nuevo</h2>
     </div>
   <% end %>
 
   <div class="field">
-    <%= form.label :image %>
+    <%= form.label 'Imagen' %>
     <%= form.file_field :image %>
   </div>
 
   <div class="field">
-    <%= form.label :title %>
+    <%= form.label 'Descripcion' %>
     <%= form.text_field :title %>
   </div>
 
   <div class="field">
-    <%= form.label :description %>
+    <%= form.label 'Precio' %>
     <%= form.text_field :description %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit 'Guardar Producto' %>
   </div>
 <% end %>

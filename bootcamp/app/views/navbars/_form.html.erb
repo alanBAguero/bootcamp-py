@@ -1,13 +1,7 @@
 <%= form_with(model: navbar) do |form| %>
   <% if navbar.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(navbar.errors.count, "error") %> prohibited this navbar from being saved:</h2>
-
-      <ul>
-        <% navbar.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
+      <h2>Error al crear navbar, intente de nuevo</h2>
     </div>
   <% end %>
 
@@ -18,6 +12,6 @@
     <%= form.label 'URL' %>
     <%= form.text_field :url %>
 
-    <%= form.submit %>
+    <%= form.submit 'Guardar Navbar' %>
   </div>
 <% end %>

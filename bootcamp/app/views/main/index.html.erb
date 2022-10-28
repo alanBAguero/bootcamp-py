@@ -16,7 +16,7 @@
 <nav>
   <%= render 'navbars/index', navbars: @navbars %>
 </nav>
-<article>
+<article class="main-section">
   <%= link_to 'Administrar Posts', posts_url %>
   <% @posts.each do |post| %>
     <%= render 'posts/index', post: post %>

@@ -25,11 +25,9 @@ class NavbarsController < ApplicationController
 
     respond_to do |format|
       if @navbar.save
-        format.html { redirect_to navbar_url(@navbar), notice: "Navbar was successfully created." }
-        format.json { render :show, status: :created, location: @navbar }
+        format.html { redirect_to navbars_url, notice: "Navbar #{@navbar.label} was successfully created." }
       else
         format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @navbar.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -38,11 +36,9 @@ class NavbarsController < ApplicationController
   def update
     respond_to do |format|
       if @navbar.update(navbar_params)
-        format.html { redirect_to navbar_url(@navbar), notice: "Navbar was successfully updated." }
-        format.json { render :show, status: :ok, location: @navbar }
+        format.html { redirect_to navbars_url, notice: "Navbar #{@navbar.label} was successfully updated." }
       else
         format.html { render :edit, status: :unprocessable_entity }
-        format.json { render json: @navbar.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -53,7 +49,6 @@ class NavbarsController < ApplicationController
 
     respond_to do |format|
       format.html { redirect_to navbars_url, notice: "Navbar was successfully destroyed." }
-      format.json { head :no_content }
     end
   end
 

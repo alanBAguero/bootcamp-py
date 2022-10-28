@@ -1,6 +1,9 @@
-<h1>Editing Product</h1>
+<h1>Editar Producto</h1>
+
+<hr>
+
+<div class="action-links">
+  <%= link_to 'Atras', products_path %>
+</div>
 
 <%= render 'form', product: @product %>
-
-<%= link_to 'Show', @product %> |
-<%= link_to 'Back', products_path %>

@@ -1,5 +1,10 @@
-<h1>New Post</h1>
+<h1>Nuevo Post</h1>
+
+<hr>
+
+<div class="action-links">
+  <%= link_to 'Atras', posts_path %>
+</div>
 
 <%= render 'form', post: @post %>
 
-<%= link_to 'Back', posts_path %>

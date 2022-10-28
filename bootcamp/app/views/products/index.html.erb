@@ -1,15 +1,22 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Products</h1>
+<h1>Productos</h1>
 
 <hr>
+
+<div class="action-links">
+  <%= link_to 'Atras', root_path %>
+  <div class="object-links">
+    <%= link_to 'Nuevo Producto', new_product_path %>
+  </div>
+</div>
 
 <table>
   <thead>
   <tr>
-    <th>Image</th>
-    <th>Title</th>
-    <th>Description</th>
+    <th>Imagen</th>
+    <th>Descripcion</th>
+    <th>Precio</th>
     <th colspan="3"></th>
   </tr>
   </thead>
@@ -31,7 +38,7 @@
         <% end %>
       </td>
       <td>
-        <%= link_to product, method: :delete, data: { confirm: 'Are you sure?' } do %>
+        <%= link_to product, method: :delete, data: { confirm: 'Está seguro?' } do %>
           <i class="material-icons">delete</i>
         <% end %>
       </td>
@@ -41,6 +48,3 @@
 </table>
 
 <br>
-
-<%= link_to 'Atras', root_path %>
-<%= link_to 'New Product', new_product_path %>

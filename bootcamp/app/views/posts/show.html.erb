@@ -1,19 +1,14 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Image:</strong>
-  <%= link_to @post.image.filename, @post.image if @post.image.attached? %>
-</p>
+<h1>Post</h1>
 
-<p>
-  <strong>Title:</strong>
-  <%= @post.title %>
-</p>
+<hr>
 
-<p>
-  <strong>Content:</strong>
-  <%= @post.content %>
-</p>
+<div class="action-links">
+  <%= link_to 'Atras', posts_path %>
+  <div class="object-links">
+    <%= link_to 'Edit', edit_post_path(@post) %>
+  </div>
+</div>
 
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
+<%= render 'posts/index', post: @post %>
