@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Post</h1>
+
+<hr>
+
+<div class="action-links">
+  <%= link_to 'Atras', posts_path %>
+  <div class="object-links">
+    <%= link_to 'Editar', edit_post_path(@post) %>
+  </div>
+</div>
+
+<%= render 'posts/index', post: @post %>

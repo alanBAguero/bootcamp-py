@@ -1,0 +1,22 @@
+/* navbar */
+.navbar .search-container {
+    float: right;
+}
+
+.navbar .search-container input[type="text"] {
+    margin: 5%;
+    padding: 2%;
+    font-size: 15px;
+    border: none;
+    width: 80%;
+}
+
+.navbar a {
+    padding: 1% 1%;
+    float: left;
+    border-bottom: 3px solid transparent;
+}
+
+.navbar a:hover {
+    border-bottom: 3px solid red;
+}

@@ -1,0 +1,17 @@
+<%= form_with(model: navbar) do |form| %>
+  <% if navbar.errors.any? %>
+    <div id="error_explanation">
+      <h2>Error al crear navbar, intente de nuevo</h2>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= form.label 'Título' %>
+    <%= form.text_field :label %>
+
+    <%= form.label 'URL' %>
+    <%= form.text_field :url %>
+
+    <%= form.submit 'Guardar Navbar' %>
+  </div>
+<% end %>

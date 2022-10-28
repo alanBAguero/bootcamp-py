@@ -1,0 +1,26 @@
+<%= form_with(model: post) do |form| %>
+  <% if post.errors.any? %>
+    <div id="error_explanation">
+      <h2>Error al crear post, intente de nuevo</h2>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label 'Imagen' %>
+    <%= form.file_field :image %>
+  </div>
+
+  <div class="field">
+    <%= form.label 'Titulo' %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= form.label 'Contenido' %>
+    <%= form.text_field :content %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit 'Guardar Post' %>
+  </div>
+<% end %>

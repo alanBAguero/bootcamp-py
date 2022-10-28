@@ -1,0 +1,31 @@
+<header>
+  <div class="banner">
+    <div class="header">
+      Boot<strong>Camp</strong>&nbsp;
+      <div class="header-section">de tecnologías cívicas</div>
+    </div>
+    <div class="content">
+      <div class="header-section">
+        <strong>Código abierto para la participación</strong>
+      </div>
+      &nbsp
+      <div class="badge">ciudadana</div>
+    </div>
+  </div>
+</header>
+
+<nav>
+  <%= render 'navbars/index', navbars: @navbars %>
+</nav>
+
+<article class="main-section">
+  <%= link_to 'Administrar Posts', posts_url %>
+  <% @posts.each do |post| %>
+    <%= render 'posts/index', post: post %>
+  <% end %>
+
+  </hr>
+
+  <%= link_to 'Administrar Productos',  products_path %>
+  <%= render 'products/index', products: @products %>
+</article>

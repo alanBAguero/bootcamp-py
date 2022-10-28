@@ -1,0 +1,13 @@
+<p id="notice"><%= notice %></p>
+<h1>Producto</h1>
+
+<hr>
+
+<div class="action-links">
+  <%= link_to 'Atras', products_path %>
+  <div class="object-links">
+    <%= link_to 'Editar', edit_product_path(@product) %>
+  </div>
+</div>
+
+<%= render 'products/index', products: [@product] %>

@@ -1,0 +1,49 @@
+/* media object */
+.media-object {
+    /* size properties */
+    width: 90%;
+    min-width: 10%;
+    /* border properties */
+    border-style: solid;
+    border-radius: 2px;
+    border-width: 2px;
+    border-color: var(--gray-color);
+    /* grid properties */
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 20% 80%;
+    /* fading */
+    opacity: 0.6;
+    transition: 0.3s;
+}
+
+.media-object:hover {
+    opacity: 1;
+}
+
+.media-object .media-image {
+    border-radius: 10%;
+    width: 70%;
+    margin: 10%;
+}
+
+@media(max-width: 700px) {
+    .media-object .media-body {
+        display: -webkit-box;
+        max-width: 100%;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+}
+
+.media-object .media-text {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.media-object .media-title {
+    font-size: medium;
+}
+
+.media-object .media-body {
+    font-size: small;
+}

@@ -1,0 +1,10 @@
+<nav>
+  <div class="navbar">
+    <% navbars.each do |navbar| %>
+      <%= link_to navbar.label, navbar.url %>
+    <% end %>
+    <div class="search-container">
+      <%= link_to 'Administrar Navbars', navbars_url %>
+    </div>
+  </div>
+</nav>
