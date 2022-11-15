@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Label:</strong>
+  <%= @navbar.label %>
+</p>
+
+<p>
+  <strong>Url:</strong>
+  <%= @navbar.url %>
+</p>
+
+<%= link_to 'Edit', edit_navbar_path(@navbar) %> |
+<%= link_to 'Back', navbars_path %>
