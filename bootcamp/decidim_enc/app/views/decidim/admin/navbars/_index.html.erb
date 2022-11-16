@@ -1,0 +1,9 @@
+<nav class="main-nav" aria-label="Main menu">
+  <ul>
+    <% navbars.each do |navbar| %>
+      <li class="main-nav__link">
+        <%= link_to navbar.label, navbar.url %>
+      </li>
+    <% end %>
+  </ul>
+</nav>
