@@ -1,0 +1,35 @@
+<div class="card">
+  <div class="card-divider">
+    <h2 class="card-title">
+      Navbars
+      <%= link_to 'New Navbar', new_navbar_path, class: "button tiny button--title" %>
+    </h2>
+  </div>
+
+  <div class="card-section">
+    <div class="table-scroll">
+      <table class="table-list">
+        <thead>
+        <tr>
+          <th>Label</th>
+          <th>Url</th>
+          <th class="actions"></th>
+        </tr>
+        </thead>
+
+        <tbody>
+          <% @navbars.each do |navbar| %>
+            <tr data-id="<%= navbar.id %>">
+              <td><%= navbar.label %><br></td>
+              <td><%= navbar.url %></td>
+              <td class="table-list__actions">
+                <%= icon_link_to "pencil", edit_navbar_path(navbar), 'Edit', class: "action-icon--edit" %>
+                <%= icon_link_to "circle-x", navbar_path(navbar), 'Destroy', class: "action-icon--remove", method: :delete, data: { confirm: t("actions.confirm_destroy", scope: "decidim.accountability", name: navbar.label) } %>
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

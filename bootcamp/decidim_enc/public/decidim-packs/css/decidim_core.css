@@ -9735,7 +9735,7 @@ body {
 /* Variables */
 /* Navigation */
 .navbar {
-  background: rgb(203, 60, 41);
+  background: #2c2930;
 }
 .navbar a:focus,
 .navbar .button:focus,
@@ -9830,7 +9830,7 @@ body {
 }
 @media print, screen and (min-width: 40em) {
   .topbar__search input {
-    background: rgb(203, 60, 41);
+    background: #2c2930;
   }
 }
 .topbar__search .input-group-button {
@@ -9864,7 +9864,7 @@ body {
 }
 @media print, screen and (min-width: 40em) {
   .topbar__search:not(:focus-within) button {
-    background: rgb(203, 60, 41);
+    background: #2c2930;
   }
 }
 .topbar__search:focus-within input {
@@ -19304,6 +19304,11 @@ label + .meeting-polls__answer + label {
   align-items: baseline;
   justify-content: space-between;
   margin-top: 2rem;
+}
+
+/* Navigation */
+.navbar {
+  background: rgb(203, 60, 41);
 }
 
 /*# sourceMappingURL=decidim_core.css.map*/
